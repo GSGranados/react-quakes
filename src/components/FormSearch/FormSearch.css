@@ -1,0 +1,31 @@
+.inputForm{
+
+    border: none;
+    border-bottom: 2px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+.labelForm{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.buttonSearch{
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 25px;
+    color: white;
+    background-color: cornflowerblue;
+    transition: 0.40s;
+    transition-timing-function: ease-in-out;
+}
+
+.buttonSearch:hover{
+    background-color: darkcyan;
+
+}
