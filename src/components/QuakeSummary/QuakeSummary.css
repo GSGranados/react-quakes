@@ -1,0 +1,11 @@
+.inputFilter{
+    border: none;
+    border-bottom: 2px solid black;
+    width: 450px;
+}
+
+.labelInput{
+    font-size: larger;
+    font-style: italic;
+    font-weight: bold;
+}
