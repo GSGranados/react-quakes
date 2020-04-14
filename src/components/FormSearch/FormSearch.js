@@ -42,6 +42,34 @@ const FormSearch = (props) => {
               ></input>
             </Paper>
           </Grid>
+          <Grid item xs={12} sm={12} md={6} lg={6}>
+            <Paper style={styles.Paper} elevation={4}>
+              <label className="labelForm" htmlFor="minMagnitude">
+                Min Magnitude:
+              </label>
+              <input
+                type="number"
+                placeholder="0.0"
+                name="minMagnitude"
+                id="minMagnitude"
+                className="inputForm"
+              ></input>
+            </Paper>
+          </Grid>
+          <Grid item xs={12} sm={12} md={6} lg={6}>
+            <Paper style={styles.Paper} elevation={4}>
+              <label className="labelForm" htmlFor="maxMagnitude">
+                Max Magnitude:
+              </label>
+              <input
+                type="number"
+                placeholder="0.0"
+                name="maxMagnitude"
+                id="maxMagnitude"
+                className="inputForm"
+              ></input>
+            </Paper>
+          </Grid>
           <Grid item xs={12}>
             <button className="buttonSearch" type="submit">
               Search for quakes

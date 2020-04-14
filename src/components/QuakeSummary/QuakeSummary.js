@@ -3,8 +3,9 @@ import { Grid, Paper } from "@material-ui/core";
 import "bootstrap/dist/css/bootstrap.css";
 import classNames from "classnames";
 import { QuakeKey } from "../QuakeKey/QuakeKey";
-import './QuakeSummary.css'
-import quakeReducer from '../../Utils/quakeReducer';
+import "./QuakeSummary.css";
+import quakeReducer from "../../Utils/quakeReducer";
+import { Link } from "react-router-dom";
 const styles = {
   Paper: {
     paddingTop: 5,
@@ -64,21 +65,27 @@ export default class QuakeSummary extends Component {
                       </span>
                     </Paper>
                   </div>
-                  <form>
-                    <label className="labelInput" htmlFor="filterInput">
-                      Filter Earthquakes:
-                    </label>
-                    <input
-                      type="text"
-                      name="filterInput"
-                      id="filterInput"
-                      className="inputFilter"
-                      onChange={this.updateSearch.bind(this)}
-                      value={this.state.search}
-                      style={{ paddingBottom: 10, marginBottom: 10, marginLeft:10 }}
-                      placeholder="ID, Location and Occured"
-                    ></input>
-                  </form>
+                  <div>
+                    <form>
+                      <label className="labelInput" htmlFor="filterInput">
+                        Filter Earthquakes:
+                      </label>
+                      <input
+                        type="text"
+                        name="filterInput"
+                        id="filterInput"
+                        className="inputFilter"
+                        onChange={this.updateSearch.bind(this)}
+                        value={this.state.search}
+                        style={{
+                          paddingBottom: 10,
+                          marginBottom: 10,
+                          marginLeft: 10,
+                        }}
+                        placeholder="ID, Location and Occured"
+                      ></input>
+                    </form>
+                  </div>
                   <div className="table-responsive-sm">
                     <table className="table">
                       <thead className="thead-dark">
@@ -87,7 +94,7 @@ export default class QuakeSummary extends Component {
                           <th scope="col">Magnitude</th>
                           <th scope="col">Occured</th>
                           <th scope="col">Location</th>
-                          <th scope="col">Extra Info.</th>
+                          <th scope="col">Xtra.</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -98,7 +105,16 @@ export default class QuakeSummary extends Component {
                               <td>{quake.properties.mag}</td>
                               <td>{quakeReducer(quake)}</td>
                               <td>{quake.properties.place}</td>
-                              <td><button className="btn btn-primary">Details</button></td>
+                              <td>
+                                <Link to={{
+                                  pathname: `/quake/${quake.id}`,
+                                  state: {quake},
+                                }}>
+                                  <button className="btn btn-primary">
+                                    Details
+                                  </button>
+                                </Link>
+                              </td>
                             </tr>
                           );
                         })}
