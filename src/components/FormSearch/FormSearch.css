@@ -4,21 +4,21 @@
     border-bottom: 2px solid black;
     margin-left: 10px;
     margin-right: 10px;
-    font-size: 30px;
+    font-size: 15px;
 }
 
 .labelForm{
-    font-size: 30px;
+    font-size: 15px;
     font-weight: bold;
     font-style: italic;
 }
 
 .buttonSearch{
-    margin-top: 10px;
+    margin-top: 5px;
     border: none;
     border-radius: 5px;
     padding: 10px;
-    font-size: 25px;
+    font-size: 15px;
     color: white;
     background-color: cornflowerblue;
     transition: 0.40s;

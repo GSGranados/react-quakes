@@ -1,0 +1,63 @@
+.QuakeElement{
+    text-align: center;
+}
+.QuakeElement-header{
+background-color: #282c34;
+min-height: 10vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+font-size: calc(10px + 2vmin);
+color: white;
+}
+
+.subTitle-item{
+    font-family: sans-serif;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.infoContainer{
+    padding: 2rem;
+    margin: 2.5rem;
+}
+
+.magnitudeField{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.magValue{
+    font-size: 35px;
+    font-style: italic;
+}
+
+.complement{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.placeField{
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.whenField{
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.typeField{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: lighter;
+}
+.typeValue{
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+.buttonGoback{
+    margin-right: 1rem;
+}
